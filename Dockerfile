@@ -7,9 +7,7 @@ RUN yes | yum install python-setuptools -y && easy_install pip
 RUN yes | yum install git
 RUN yes | yum install m2crypto git
 RUN yum install passwd
-RUN git clone -b manyuser https://github.com/shadowsocksr/shadowsocksr.git
+RUN git clone -b manyuser https://github.com/shadowsocksr/shadowsocksr.git /root
 RUN pip install cymysql
 
-# ADD entrypoint.sh /usr/local/bin/entrypoint.sh
-# # Configure container to run as an executable
-# ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+ENTRYPOINT ["/root/shadowsocksr/shadowsocks"]
