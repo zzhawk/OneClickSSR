@@ -2,9 +2,9 @@
 
 FROM centos:centos7
 
-RUN -y yum install python-setuptools && easy_install pip
-RUN -y yum install git
-RUN -y yum install m2crypto git
+RUN yes | yum install python-setuptools && easy_install pip
+RUN yes | yum install git
+RUN yes | yum install m2crypto git
 RUN yum install passwd
 RUN git clone -b manyuser https://github.com/shadowsocksr/shadowsocksr.git
 WORKDIR shadowsocksr/shadowsocks
