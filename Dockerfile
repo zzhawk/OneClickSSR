@@ -2,7 +2,7 @@
 
 FROM centos:centos7
 
-RUN yes | yum install python-setuptools && easy_install pip
+RUN yes | yum install python-setuptools -y && easy_install pip
 RUN yes | yum install git
 RUN yes | yum install m2crypto git
 RUN yum install passwd
