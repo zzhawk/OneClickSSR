@@ -11,4 +11,4 @@ RUN git clone -b manyuser https://github.com/shadowsocksr/shadowsocksr.git /root
 RUN pip install cymysql
 
 
-ENTRYPOINT ["/root/app/shadowsocksr/shadowsocks"]
+# ENTRYPOINT ["/root/app/shadowsocksr/shadowsocks"]
