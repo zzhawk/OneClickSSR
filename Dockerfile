@@ -10,8 +10,5 @@ RUN yum install passwd
 RUN git clone -b manyuser https://github.com/shadowsocksr/shadowsocksr.git /root/app/shadowsocksr
 RUN pip install cymysql
 
-COPY entrypoint.sh /usr/local/bin/
 
-RUN chmod +x /usr/local/bin/entrypoint.sh
-
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+ENTRYPOINT ["/root/app/shadowsocksr/shadowsocks"]
