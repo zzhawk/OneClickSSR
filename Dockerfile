@@ -11,6 +11,8 @@ RUN git clone -b manyuser https://github.com/shadowsocksr/shadowsocksr.git /root
 RUN pip install cymysql
 
 COPY entrypoint.sh /usr/local/bin/
+
+RUN chmod +x /root/app
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
