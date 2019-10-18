@@ -8,7 +8,7 @@ RUN yes | yum install git
 RUN yes | yum install m2crypto git
 RUN yes | yum install passwd
 RUN git clone -b manyuser https://github.com/shadowsocksrr/shadowsocksr /root/app/shadowsocksr
-RUN git checkout akkariiin/dev
+RUN cd /root/app/shadowsocksr && git checkout akkariiin/dev
 RUN pip install cymysql
 
 WORKDIR /root/app/shadowsocksr/shadowsocks
